@@ -47,8 +47,13 @@ function oddChecker(num){
 
 // Create a function called 'iLove' that takes in two parameters, name which will be a string  and love which will be a string of something you love. Have the function take the two parameters and retrun a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Bryan loves skateboarding"
 
+// function iLove(name,love){
+// 	return `${name} loves ${love}`
+// }
+
 function iLove(name,love){
-	return `${name} loves ${love}`
+	return name + ' loves ' + love
+	//Bryan loves skateboarding
 }
 //////////////////PROBLEM 8////////////////////
 
@@ -100,14 +105,36 @@ function bigOrSmall(arr){
 
 // Create a function called 'arrayReverser' that takes in one parameter, arr. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array in reverse and add each item to the new reversed array. Finally, return the new reversed array
 
+// var arr = ['this','that','the']
+// arr[index]
+// arr[2]
+// 2
+// for(initialization; condition to be met; incrementor/something changes){
+
+// }
+
+// arr.length // 3
+// arr.length -1 //2
+//[[2],[1],[0]]
+
+
+
+
 function arrayReverser(arr){
 	var reversed = []
-	// for(let i = arr.length - 1; i >= 0;  i--){
-	// 	reversed.push(arr[i])
-	// }
-	for(let i = 0; i < arr.length ; i++){
-		reversed.unshift(arr[i])
+	for(let index = arr.length - 1; index >= 0;  index--){
+		reversed.push(arr[index])
+		//first iteration (index 2) => ['the']
+		//decrement index => index 1
+		//second iteration (index 1) => ['the','that']
+		//decrement index => index 0
+		//third iteration (index 0) => ['the','that','this']
+		//decrement index => index -1
+
 	}
+	// for(let i = 0; i < arr.length ; i++){
+	// 	reversed.unshift(arr[i])
+	// }
 	return reversed
 }
 //////////////////PROBLEM 14 - 18 Setup////////////////////
